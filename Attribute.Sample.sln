@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttributeSample.UI", "Attribute.UI\AttributeSample.UI.csproj", "{9C777DA7-E047-4E75-8458-6E70A58E31CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttributeSample.Domain", "AttributeSample.Domain\AttributeSample.Domain.csproj", "{5D2E4BA4-FF5A-47F2-A015-3391CFBF597A}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C777DA7-E047-4E75-8458-6E70A58E31CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C777DA7-E047-4E75-8458-6E70A58E31CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C777DA7-E047-4E75-8458-6E70A58E31CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C777DA7-E047-4E75-8458-6E70A58E31CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D2E4BA4-FF5A-47F2-A015-3391CFBF597A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D2E4BA4-FF5A-47F2-A015-3391CFBF597A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D2E4BA4-FF5A-47F2-A015-3391CFBF597A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D2E4BA4-FF5A-47F2-A015-3391CFBF597A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
