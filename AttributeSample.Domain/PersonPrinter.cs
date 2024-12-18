@@ -19,7 +19,8 @@ public class PersonPrinter
         Console.WriteLine($"FullName:{_person.FirstName},{_person.LastName}");
     }
 
-    private void PrintAge()
+    [Obsolete("printAge() will remove soon"/*,error:true*/)]
+    public void PrintAge()
     {
         Console.WriteLine($"Age : {_person.Age}");
     }
