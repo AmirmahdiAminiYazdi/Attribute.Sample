@@ -1,33 +1,23 @@
-﻿
+﻿using System.Diagnostics;
+
+[DebuggerDisplay("Person: {FirstName} {LastName}, Age: {Age}")]
+[DebuggerTypeProxy(typeof(PersonDebuggerTypeProxy))]
 public class Person
 {
+    [DebuggerBrowsable(DebuggerBrowsableState.Never)]
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public int Age { get; set; }
-}
 
-public class PersonPrinter
-{
-    private readonly Person _person;
-
-    public PersonPrinter(Person person)
+    public class PersonDebuggerTypeProxy
     {
-        _person = person;
-    }
+        private readonly Person _person;
 
-    public void print()
-    {
-        PrintFullName();
-        PrintAge();
-    }
-
-    private void PrintFullName()
-    {
-        Console.WriteLine($"FullName:{_person.FirstName},{_person.LastName}");
-    }
-
-    private void PrintAge()
-    {
-        Console.WriteLine($"Age : {_person.Age}");
+        public PersonDebuggerTypeProxy(Person person)
+        {
+            _person = person;
+        }
+        public string FullName => $"{_person.FirstName} , {_person.LastName}";
+        public int Age => _person.Age;
     }
 }
