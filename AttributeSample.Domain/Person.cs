@@ -1,9 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
+using System.Text.Json.Serialization;
 
 [DebuggerDisplay("Person: {FirstName} {LastName}, Age: {Age}")]
 [DebuggerTypeProxy(typeof(PersonDebuggerTypeProxy))]
-public class Person
+[Serializable]
+public partial class Person
 {
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
     [Required]
@@ -11,16 +13,6 @@ public class Person
     [StringLength(100)]
     public string LastName { get; set; }
     public int Age { get; set; }
-
-    public class PersonDebuggerTypeProxy
-    {
-        private readonly Person _person;
-
-        public PersonDebuggerTypeProxy(Person person)
-        {
-            _person = person;
-        }
-        public string FullName => $"{_person.FirstName} , {_person.LastName}";
-        public int Age => _person.Age;
-    }
+    [NonSerialized]
+    private int _age;
 }
