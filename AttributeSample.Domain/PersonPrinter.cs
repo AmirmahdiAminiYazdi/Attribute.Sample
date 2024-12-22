@@ -1,5 +1,4 @@
-﻿
-
+﻿using Attribute.Sample.CustomAttributes;
 using System.Diagnostics;
 
 public class PersonPrinter
