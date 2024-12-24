@@ -1,4 +1,6 @@
-﻿Person AmirMahdi = new()
+﻿using AttributeSample.Domain;
+
+Person AmirMahdi = new()
 {
     FirstName ="Amir Mahdi ",
     LastName = "Amini Yazdi",

@@ -1,5 +1,5 @@
 ﻿
-namespace Attribute.Sample.CustomAttributes
+namespace AttributeSample.CustomAttributes
 {
     [AttributeUsage(AttributeTargets.Assembly)]
     public class AutoScanForDependencyAttribute : System.Attribute
@@ -16,7 +16,7 @@ namespace Attribute.Sample.CustomAttributes
         public DateTime ChangeDateTime { get; set; }
         public bool IsBug { get; set; }
 
-        public ChangeHistory(string autorName, bool isBug)
+        public CodeChangeHistory(string autorName, bool isBug)
         {
             _autorName = autorName;
             IsBug = isBug;

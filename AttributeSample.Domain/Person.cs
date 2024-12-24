@@ -1,7 +1,7 @@
-﻿using Attribute.Sample.CustomAttributes;
+﻿using AttributeSample.CustomAttributes;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
-using System.Text.Json.Serialization;
+namespace AttributeSample.Domain;
 
 [DebuggerDisplay("Person: {FirstName} {LastName}, Age: {Age}")]
 [DebuggerTypeProxy(typeof(PersonDebuggerTypeProxy))]

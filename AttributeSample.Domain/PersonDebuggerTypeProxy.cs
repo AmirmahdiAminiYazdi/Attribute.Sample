@@ -1,5 +1,4 @@
-﻿public partial class Person
-{
+﻿using AttributeSample.Domain;
     public class PersonDebuggerTypeProxy
     {
         private readonly Person _person;
@@ -11,4 +10,3 @@
         public string FullName => $"{_person.FirstName} , {_person.LastName}";
         public int Age => _person.Age;
     }
-}

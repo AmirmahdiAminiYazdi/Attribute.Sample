@@ -1,4 +1,4 @@
-﻿using Attribute.Sample.CustomAttributes;
+﻿using AttributeSample.CustomAttributes;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
