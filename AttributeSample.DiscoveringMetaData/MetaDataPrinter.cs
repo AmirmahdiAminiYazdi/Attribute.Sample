@@ -1,4 +1,8 @@
-﻿namespace AttributeSample.DiscoveringMetaData
+﻿using AttributeSample.CustomAttributes;
+using System.Reflection;
+
+
+namespace AttributeSample.DiscoveringMetaData
 {
     public class MetaDataPrinter
     {
@@ -14,8 +18,19 @@
             PrintMethodInfo();
             PrintPropertyInfo();
             PrintFieldInfo();
-           
+            printcodeChangeHistory();
 
+
+        }
+
+        private void printcodeChangeHistory()
+        {
+            Console.WriteLine($"************ Change History of type {_type.Name} ************");
+            var attributes = _type.GetCustomAttributes(typeof(CodeChangeHistoryAttribute));
+            foreach (CodeChangeHistoryAttribute attribute in attributes)
+            {
+                Console.WriteLine($"Change DataTime is :{attribute.ChangeDateTime} \t\t Is Bug Fix {attribute.IsBug} \t\t {attribute.Description} ");
+            }
         }
 
         private void PrintFieldInfo()
